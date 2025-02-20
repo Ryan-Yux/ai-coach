@@ -3,16 +3,12 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = 3000;
-
 // 配置CORS和静态文件服务
 app.use(cors());
 app.use(express.json());
-app.use(express.static('.'));
-
 
 // DeepSeek R1 API配置
-const API_KEY = '19db38d7-aba9-4822-a1c1-fd7d5eeaf5c9';
+const API_KEY = process.env.API_KEY;
 const API_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
 
 // 系统提示词
