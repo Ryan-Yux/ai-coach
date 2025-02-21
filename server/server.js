@@ -130,6 +130,7 @@ app.post('/chat', async (req, res) => {
 });
 
 // 启动服务器
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`服务器运行在 http://localhost:${port}`);
 });
